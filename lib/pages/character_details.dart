@@ -39,12 +39,13 @@ class CharacterDetails extends StatelessWidget {
                 trailing: Text(character.status),
               ),
             ),
-            Card(
-              child: ListTile(
-                title: const Text('Tipo'),
-                trailing: Text(character.type),
+            if (character.type != null && character.type != '')
+              Card(
+                child: ListTile(
+                  title: const Text('Tipo'),
+                  trailing: Text(character.type!),
+                ),
               ),
-            ),
             Card(
               child: ListTile(
                 title: const Text('Origen'),

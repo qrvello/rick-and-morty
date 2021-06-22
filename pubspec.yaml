@@ -12,8 +12,11 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^7.0.1
+  google_fonts: ^2.1.0
   http: ^0.13.3
   pagination_view: ^2.0.0
+  search_page: ^2.0.0+1
+  equatable: ^2.0.3
 
 dev_dependencies:
   flutter_test:

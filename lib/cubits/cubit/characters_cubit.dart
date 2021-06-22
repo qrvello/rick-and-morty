@@ -20,8 +20,7 @@ class CharactersCubit extends Cubit<CharactersState> {
     try {
       final decodedData = await _apiService.getCharacters(1);
 
-      if (decodedData['results'] != null &&
-          decodedData['results'] is Map<String, dynamic>) {
+      if (decodedData['results'] != null) {
         for (final result in decodedData['results']) {
           final Character character =
               Character.fromMap(result as Map<String, dynamic>);
@@ -42,8 +41,7 @@ class CharactersCubit extends Cubit<CharactersState> {
     try {
       final decodedData = await _apiService.getCharacters(1);
 
-      if (decodedData['results'] != null &&
-          decodedData['results'] is Map<String, dynamic>) {
+      if (decodedData['results'] != null) {
         for (final result in decodedData['results']) {
           final Character character =
               Character.fromMap(result as Map<String, dynamic>);

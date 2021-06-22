@@ -23,7 +23,13 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Bienvenido'),
+              const Text(
+                'Bienvenido',
+                style: TextStyle(
+                  fontSize: 36,
+                ),
+              ),
+              const SizedBox(height: 12),
               TextFormField(
                 decoration: const InputDecoration(
                   labelText: 'Código de accesso',
@@ -33,13 +39,17 @@ class _HomePageState extends State<HomePage> {
                     return 'Ingrese un código de acceso';
                   }
                   if (value != accessCode) return 'Código de accesso inválido';
+
                   return null;
                 },
               ),
               const SizedBox(height: 12),
               ElevatedButton(
                 onPressed: () => _submit(),
-                child: const Text('Acceder'),
+                child: const Text(
+                  'Acceder',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ],
           ),

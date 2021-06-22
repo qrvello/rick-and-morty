@@ -1,10 +1,12 @@
-class Character {
+import 'package:equatable/equatable.dart';
+
+class Character extends Equatable {
   Character({
     required this.id,
     required this.name,
     required this.status,
     required this.species,
-    required this.type,
+    this.type,
     required this.gender,
     required this.origin,
     required this.location,
@@ -18,7 +20,7 @@ class Character {
   String name;
   String status;
   String species;
-  String type;
+  String? type;
   String gender;
   Location origin;
   Location location;
@@ -26,6 +28,9 @@ class Character {
   List<String> episode;
   String url;
   DateTime created;
+
+  @override
+  List<Object> get props => [id];
 
   factory Character.fromMap(Map<String, dynamic> json) => Character(
         id: int.parse(json["id"].toString()),
